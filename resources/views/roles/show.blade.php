@@ -1,0 +1,38 @@
+@extends('layouts.app')
+
+@section('content')
+
+    <div class="row">
+        <div class="col-lg-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-lg-12 margin-tb">
+                            <div class="d-inline-flex align-items-center justify-content-between w-100">
+                                <h4> Show Role</h4>
+                                <a class="btn btn-primary" href="{{ route('roles.index') }}"> Back</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="form-group">
+                                <strong>Id:</strong>
+                                {{ $role->id }}
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="form-group">
+                                <strong>Name:</strong>
+                                {{ $role->name }}
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+@endsection
