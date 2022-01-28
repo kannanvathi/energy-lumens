@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Career;
 use Illuminate\Http\Request;
+use Spatie\Permission\Models\Permission;
 
 class CareerController extends Controller
 {
@@ -12,6 +13,16 @@ class CareerController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('permission:career-list|career-create|career-edit|career-delete', ['only' => ['index', 'store']]);
+        $this->middleware('permission:career-create', ['only' => ['create', 'store']]);
+        $this->middleware('permission:career-edit', ['only' => ['edit', 'update']]);
+        $this->middleware('permission:career-delete', ['only' => ['delete']]);
+
+    }
+
     public function index()
     {
         $careers = Career::all();

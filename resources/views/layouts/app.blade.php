@@ -514,6 +514,7 @@
                             </a>
                         </li>
 
+                        @if (auth()->user()->can('product-list') || auth()->user()->can('product-create') || auth()->user()->can('product-edit') || auth()->user()->can('product-delete'))
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('products.index')}}" >
                                 {{--{{ url('/home') }}--}}
@@ -521,32 +522,45 @@
                                 <span class="menu-title">Products</span>
                             </a>
                         </li>
+                        @endif
 
+                        @if (auth()->user()->can('user-list') || auth()->user()->can('user-create') || auth()->user()->can('user-edit') || auth()->user()->can('user-delete'))
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('users.index') }}" >
                                 <i class="icon-paper menu-icon"></i>
                                 <span class="menu-title">Users</span>
                             </a>
                         </li>
+                        @endif
 
+
+                        @if (auth()->user()->can('role-list') || auth()->user()->can('role-create') || auth()->user()->can('role-edit') || auth()->user()->can('role-delete'))
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('roles.index') }}" >
                                 <i class="icon-paper menu-icon"></i>
                                 <span class="menu-title">Roles</span>
                             </a>
                         </li>
+                        @endif
+
+                        @if (auth()->user()->can('career-list') || auth()->user()->can('career-create') || auth()->user()->can('career-edit') || auth()->user()->can('career-delete'))
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('careers.index') }}" >
                                 <i class="icon-paper menu-icon"></i>
                                 <span class="menu-title">Careers</span>
                             </a>
                         </li>
+                        @endif
+
+
                         <li class="nav-item">
                             <a class="nav-link" href="{{url('/get-enquire')}}" >
                                 <i class="icon-paper menu-icon"></i>
                                 <span class="menu-title">Enquiries</span>
                             </a>
                         </li>
+
+
                     </ul>
                 </nav>
                 <!-- partial -->
