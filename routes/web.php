@@ -3,10 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EnquiryController;
 use App\Http\Controllers\ProductController;
-use App\Http\controllers\LandingController;
-use App\Http\controllers\UsersController;
-use App\Http\controllers\RolesController;
-use App\Http\controllers\CareerController;
+use App\Http\Controllers\LandingController;
+use App\Http\Controllers\UsersController;
+use App\Http\Controllers\RolesController;
+use App\Http\Controllers\CareerController;
 
 
 /*
