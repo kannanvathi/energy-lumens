@@ -528,7 +528,7 @@
                                 <span class="menu-title">Users</span>
                             </a>
                         </li>
-                        
+
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('roles.index') }}" >
                                 <i class="icon-paper menu-icon"></i>
@@ -542,6 +542,7 @@
                             </a>
                         </li>
 
+                        
                         <li class="nav-item">
                             <a class="nav-link" href="{{url('/get-enquire')}}" >
                                 <i class="icon-paper menu-icon"></i>
