@@ -541,8 +541,6 @@
                                 <span class="menu-title">Careers</span>
                             </a>
                         </li>
-
-                        
                         <li class="nav-item">
                             <a class="nav-link" href="{{url('/get-enquire')}}" >
                                 <i class="icon-paper menu-icon"></i>
